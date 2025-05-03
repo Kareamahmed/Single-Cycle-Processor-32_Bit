@@ -1,0 +1,35 @@
+
+# === Initialize array values ===
+SET   R1, 0x0000         ; R1 = 0x00000000  → array base address
+SET   R2, 0x0003         ; R2 = 0x00000003  → number of elements (n = 3)
+
+SET   R3, 0x0002         ; R3 = 0x00000002
+SW    R3, 0(R1)          ; MEM[0] = 2
+
+SET   R3, 0x0004         ; R3 = 0x00000004
+SW    R3, 1(R1)          ; MEM[1] = 4
+
+SET   R3, 0x0006         ; R3 = 0x00000006
+SW    R3, 2(R1)          ; MEM[2] = 6
+
+# === Call procedure to compute sum ===
+JALR  R31, R0, sum       ; R31 = return address, jump to label 'sum'
+
+# === Exit: infinite loop ===
+exit:
+JALR  R0, R0, exit       ; Infinite loop to stop execution
+
+# === Procedure: Sum array ===
+sum:
+SET   R5, 0x0000         ; R5 = 0  → sum = 0
+SET   R6, 0x0000         ; R6 = 0  → index i = 0
+
+loop:
+ADD   R7, R1, R6         ; R7 = R1 + R6  → address of a[i]
+LW    R8, 0(R7)          ; R8 = MEM[a[i]]
+ADD   R5, R5, R8         ; R5 = R5 + R8  → accumulate sum
+ADDI  R6, R6, 1          ; R6 = R6 + 1   → i++
+BNE   R6, R2, loop       ; if i != n, repeat
+
+# === Return from procedure ===
+JALR  R0, R31, 0         ; Jump back to caller (PC = R31)
