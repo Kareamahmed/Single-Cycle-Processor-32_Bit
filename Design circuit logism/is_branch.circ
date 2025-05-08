@@ -157,9 +157,10 @@ end TCL_Generic;&#13;
     <a name="circuitvhdl" val="false"/>
     <a name="circuitvhdlpath" val=""/>
     <appear>
-      <path d="M92,25 Q96,35 100,25" fill="none" stroke="#808080" stroke-width="2"/>
-      <rect fill="none" height="101" stroke="#000000" stroke-width="2" width="120" x="40" y="24"/>
-      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="98" y="75">IS_Branch</text>
+      <rect fill="none" height="101" stroke="#000000" stroke-width="2" width="120" x="42" y="26"/>
+      <rect fill="#4891c4" height="99" stroke="none" width="118" x="43" y="27"/>
+      <text font-family="SansSerif" font-size="20" font-weight="bold" text-anchor="middle" x="104" y="80">IS_Branch</text>
+      <path d="M93,27 Q99,40 103,30" fill="none" stroke="#363636" stroke-width="2"/>
       <circ-port height="8" pin="340,510" width="8" x="36" y="66"/>
       <circ-port height="10" pin="1230,310" width="10" x="155" y="65"/>
       <circ-anchor facing="east" height="6" width="6" x="157" y="67"/>
@@ -179,16 +180,16 @@ end TCL_Generic;&#13;
     <wire from="(600,340)" to="(1050,340)"/>
     <wire from="(580,430)" to="(580,510)"/>
     <wire from="(600,310)" to="(840,310)"/>
-    <comp lib="0" loc="(1230,310)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
+    <comp lib="2" loc="(580,430)" name="Decoder">
+      <a name="select" val="5"/>
     </comp>
     <comp lib="0" loc="(340,510)" name="Pin">
       <a name="width" val="5"/>
     </comp>
-    <comp lib="2" loc="(580,430)" name="Decoder">
-      <a name="select" val="5"/>
+    <comp lib="0" loc="(1230,310)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="1" loc="(1120,310)" name="OR Gate">
       <a name="size" val="70"/>

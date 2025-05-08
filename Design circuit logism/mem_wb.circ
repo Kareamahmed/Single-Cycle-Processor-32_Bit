@@ -189,18 +189,19 @@ end TCL_Generic;&#13;
     <a name="circuitvhdl" val="false"/>
     <a name="circuitvhdlpath" val=""/>
     <appear>
-      <path d="M107,13 Q111,23 115,13" fill="none" stroke="#808080" stroke-width="2"/>
       <rect fill="none" height="470" stroke="#000000" stroke-width="2" width="152" x="50" y="17"/>
-      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="122" y="102">reg_write</text>
-      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="125" y="134">rd_src</text>
-      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="121" y="176">PC+1</text>
-      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="124" y="203">rd</text>
-      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="116" y="481">clk</text>
-      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="125" y="55">ALUres_or_DataOut</text>
-      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="122" y="295">imm16_16bit_mem</text>
-      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="124" y="331">imm16_32_mem</text>
-      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="121" y="361">BUSB_mem</text>
-      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="124" y="428">SSET</text>
+      <rect fill="#21c476" height="466" stroke="none" width="149" x="51" y="20"/>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="126" y="100">reg_write</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="126" y="293">imm16_16bit_mem</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="128" y="426">SSET</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="120" y="479">clk</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="125" y="359">BUSB_mem</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="129" y="132">rd_src</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="129" y="53">ALUres_or_DataOut</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="128" y="201">rd</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="125" y="174">PC+1</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="128" y="329">imm16_32_mem</text>
+      <path d="M115,20 Q116,45 123,20" fill="none" stroke="#454545" stroke-width="2"/>
       <circ-port height="8" pin="170,350" width="8" x="46" y="96"/>
       <circ-port height="8" pin="160,480" width="8" x="46" y="126"/>
       <circ-port height="8" pin="160,600" width="8" x="46" y="166"/>
@@ -278,56 +279,8 @@ end TCL_Generic;&#13;
     <wire from="(280,500)" to="(350,500)"/>
     <wire from="(280,620)" to="(350,620)"/>
     <wire from="(280,160)" to="(350,160)"/>
-    <comp lib="0" loc="(610,1030)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(70,1450)" name="Pin">
-      <a name="label" val="clk"/>
-    </comp>
     <comp lib="4" loc="(390,1000)" name="Register">
       <a name="width" val="32"/>
-    </comp>
-    <comp lib="8" loc="(940,240)" name="Text">
-      <a name="text" val="WB"/>
-    </comp>
-    <comp lib="0" loc="(160,600)" name="Pin">
-      <a name="width" val="20"/>
-      <a name="label" val="PC_Plus_1"/>
-    </comp>
-    <comp lib="4" loc="(390,1240)" name="Register">
-      <a name="width" val="1"/>
-    </comp>
-    <comp lib="4" loc="(350,320)" name="Register">
-      <a name="width" val="1"/>
-    </comp>
-    <comp lib="0" loc="(210,140)" name="Pin">
-      <a name="width" val="32"/>
-      <a name="label" val="ALUres_or_DataOut"/>
-    </comp>
-    <comp lib="0" loc="(550,600)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="20"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(160,480)" name="Pin">
-      <a name="width" val="2"/>
-      <a name="label" val="rd_src"/>
-    </comp>
-    <comp lib="0" loc="(570,730)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="5"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="4" loc="(350,450)" name="Register">
-      <a name="width" val="2"/>
-    </comp>
-    <comp lib="4" loc="(390,840)" name="Register">
-      <a name="width" val="16"/>
     </comp>
     <comp lib="0" loc="(550,480)" name="Pin">
       <a name="facing" val="west"/>
@@ -335,40 +288,53 @@ end TCL_Generic;&#13;
       <a name="width" val="2"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="0" loc="(570,140)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(160,480)" name="Pin">
+      <a name="width" val="2"/>
+      <a name="label" val="rd_src"/>
+    </comp>
     <comp lib="0" loc="(610,1270)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(170,350)" name="Pin">
-      <a name="label" val="reg_write"/>
-    </comp>
-    <comp lib="0" loc="(190,870)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="label" val="imm16_16bit_mem"/>
-    </comp>
-    <comp lib="4" loc="(390,1120)" name="Register">
+    <comp lib="4" loc="(350,110)" name="Register">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(170,1030)" name="Pin">
-      <a name="width" val="32"/>
-      <a name="label" val="imm16_32_mem"/>
+    <comp lib="8" loc="(946,439)" name="Text">
+      <a name="text" val="rd"/>
+    </comp>
+    <comp lib="0" loc="(150,730)" name="Pin">
+      <a name="width" val="5"/>
+      <a name="label" val="rd"/>
+    </comp>
+    <comp lib="4" loc="(350,570)" name="Register">
+      <a name="width" val="20"/>
+    </comp>
+    <comp lib="4" loc="(350,320)" name="Register">
+      <a name="width" val="1"/>
+    </comp>
+    <comp lib="0" loc="(570,730)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="5"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="8" loc="(937,297)" name="Text">
       <a name="text" val="reg_write"/>
     </comp>
-    <comp lib="0" loc="(80,1390)" name="Constant"/>
-    <comp lib="0" loc="(170,1270)" name="Pin">
-      <a name="label" val="SSET"/>
+    <comp lib="8" loc="(940,240)" name="Text">
+      <a name="text" val="WB"/>
     </comp>
-    <comp lib="4" loc="(350,700)" name="Register">
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="4" loc="(350,110)" name="Register">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="8" loc="(943,394)" name="Text">
-      <a name="text" val="PC_plus_1"/>
+    <comp lib="0" loc="(560,350)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(610,870)" name="Pin">
       <a name="facing" val="west"/>
@@ -376,14 +342,18 @@ end TCL_Generic;&#13;
       <a name="width" val="16"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="8" loc="(946,439)" name="Text">
-      <a name="text" val="rd"/>
+    <comp lib="0" loc="(170,350)" name="Pin">
+      <a name="label" val="reg_write"/>
     </comp>
-    <comp lib="0" loc="(570,140)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
+    <comp lib="0" loc="(170,1270)" name="Pin">
+      <a name="label" val="SSET"/>
+    </comp>
+    <comp lib="0" loc="(70,1450)" name="Pin">
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(170,1030)" name="Pin">
       <a name="width" val="32"/>
-      <a name="labelloc" val="east"/>
+      <a name="label" val="imm16_32_mem"/>
     </comp>
     <comp lib="0" loc="(610,1150)" name="Pin">
       <a name="facing" val="west"/>
@@ -391,24 +361,55 @@ end TCL_Generic;&#13;
       <a name="width" val="32"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="0" loc="(80,1390)" name="Constant"/>
+    <comp lib="4" loc="(350,450)" name="Register">
+      <a name="width" val="2"/>
+    </comp>
     <comp lib="0" loc="(170,1150)" name="Pin">
       <a name="width" val="32"/>
       <a name="label" val="BUSB_mem"/>
     </comp>
+    <comp lib="8" loc="(943,394)" name="Text">
+      <a name="text" val="PC_plus_1"/>
+    </comp>
+    <comp lib="4" loc="(390,1240)" name="Register">
+      <a name="width" val="1"/>
+    </comp>
+    <comp lib="0" loc="(190,870)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="imm16_16bit_mem"/>
+    </comp>
     <comp lib="8" loc="(951,344)" name="Text">
       <a name="text" val="rd_src"/>
     </comp>
-    <comp lib="0" loc="(150,730)" name="Pin">
-      <a name="width" val="5"/>
-      <a name="label" val="rd"/>
+    <comp lib="4" loc="(390,840)" name="Register">
+      <a name="width" val="16"/>
     </comp>
-    <comp lib="0" loc="(560,350)" name="Pin">
+    <comp lib="0" loc="(610,1030)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
+      <a name="width" val="32"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="4" loc="(350,570)" name="Register">
+    <comp lib="0" loc="(210,140)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="label" val="ALUres_or_DataOut"/>
+    </comp>
+    <comp lib="0" loc="(160,600)" name="Pin">
       <a name="width" val="20"/>
+      <a name="label" val="PC_Plus_1"/>
+    </comp>
+    <comp lib="4" loc="(350,700)" name="Register">
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="4" loc="(390,1120)" name="Register">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(550,600)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="20"/>
+      <a name="labelloc" val="east"/>
     </comp>
   </circuit>
   <circuit name="bllock">
@@ -418,5 +419,6 @@ end TCL_Generic;&#13;
     <a name="clabelfont" val="SansSerif plain 12"/>
     <a name="circuitvhdl" val="false"/>
     <a name="circuitvhdlpath" val=""/>
+    <comp loc="(1090,600)" name="main"/>
   </circuit>
 </project>
